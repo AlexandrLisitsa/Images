@@ -1,0 +1,6 @@
+29.07.2017 0:15:11 WyPik |Easy| Result:3 Seconds| Click count:8
+29.07.2017 3:57:21 e |Easy| Result:2 Seconds| Click count:8
+29.07.2017 4:02:49 67 |Easy| Result:9 Seconds| Click count:16
+29.07.2017 4:04:17 test |Easy| Result:2 Seconds| Click count:8
+29.07.2017 4:14:03 45 |Easy| Result:3 Seconds| Click count:8
+29.07.2017 4:16:30 Default |Easy| Result:4 Seconds| Click count:8

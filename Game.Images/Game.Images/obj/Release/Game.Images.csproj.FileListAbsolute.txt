@@ -1,0 +1,8 @@
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\bin\Release\Game.Images.exe.config
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\bin\Release\Game.Images.exe
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\bin\Release\Game.Images.pdb
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj\Release\Game.Images.MainFrame.resources
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj\Release\Game.Images.Properties.Resources.resources
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj\Release\Game.Images.csproj.GenerateResource.Cache
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj\Release\Game.Images.exe
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj\Release\Game.Images.pdb

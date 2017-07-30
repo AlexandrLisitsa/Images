@@ -1,0 +1,9 @@
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\bin\Debug\Game.Images.exe.config
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\bin\Debug\Game.Images.exe
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\bin\Debug\Game.Images.pdb
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj\Debug\Game.Images.csprojResolveAssemblyReference.cache
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj\Debug\Game.Images.Properties.Resources.resources
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj\Debug\Game.Images.csproj.GenerateResource.Cache
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj\Debug\Game.Images.exe
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj\Debug\Game.Images.pdb
+c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj\Debug\Game.Images.MainFrame.resources

@@ -1,0 +1,16 @@
+28.07.2017 1:49:44| Result:14 Seconds.
+28.07.2017 1:56:43| Result:12 Seconds.
+28.07.2017 1:58:31| Result:26 Seconds.
+28.07.2017 2:01:24| Result:10 Seconds.
+28.07.2017 2:02:03| Result:8 Seconds.
+28.07.2017 2:08:45 WyPik | Result:10 Seconds.
+28.07.2017 6:06:50 WyPik | Result:7 Seconds.
+28.07.2017 6:13:35 мамуля | Result:38 Seconds.
+28.07.2017 6:13:56 123 | Result:17 Seconds.
+28.07.2017 6:14:21 123 | Result:10 Seconds.
+28.07.2017 6:36:08 123 | Result:8 Seconds.
+28.07.2017 8:16:01 WyPik Easy| Result:3 Seconds.
+28.07.2017 8:16:37 WyPik |Easy| Result:3 Seconds.
+28.07.2017 8:22:06 WyPik |Epyc| Result:256 Seconds.
+28.07.2017 8:26:26 WyPik |Easy| Result:2 Seconds| Click count:8
+29.07.2017 0:03:30 TestRegistration |Easy| Result:2 Seconds| Click count:8
