@@ -23,6 +23,7 @@ namespace Game.Images
         private List<ImageBox> pictures = new List<ImageBox>();
         public List<ImageBox> picturesCompareList = new List<ImageBox>();
 
+        private int col, row;
         public int totalClickCount = 0;
         private int imageCount = 2;
         private System.Timers.Timer t,gameCycle;
@@ -41,6 +42,7 @@ namespace Game.Images
             initImages();
             mixImages();
             paintImages();
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
             t = new System.Timers.Timer(5000);
             t.Elapsed += hideColors;
             t.Start();
@@ -49,17 +51,19 @@ namespace Game.Images
         private void initMainMenu()
         {
             this.Controls.Remove(this.MainPanel);
-            Button easy, medium, hard, epyc;
+            Button easy, medium, hard, epyc,custom;
             //buttons memory allocation
             easy = new Button();
             medium = new Button();
             hard = new Button();
             epyc = new Button();
+            custom = new Button();
             //add buttons click listener
             easy.Click += difficultSelect;
             hard.Click += difficultSelect;
             medium.Click += difficultSelect;
             epyc.Click += difficultSelect;
+            custom.Click += difficultSelect;
             //init buttons name&text
             easy.Name = "Easy";
             easy.Text = "Easy";
@@ -69,17 +73,20 @@ namespace Game.Images
             hard.Text = "Hard";
             epyc.Name = "Epyc";
             epyc.Text = "Epyc";
+            custom.Name = "Custom";
+            custom.Text = "Custom";
             //select button location on frame
-            easy.SetBounds(10, 50, 100, 100);
-            medium.SetBounds(110, 50, 100, 100);
-            hard.SetBounds(210, 50, 100, 100);
-            epyc.SetBounds(310, 50, 100, 100);
+            easy.SetBounds(10, 10, 100, 100);
+            medium.SetBounds(110, 10, 100, 100);
+            hard.SetBounds(210, 10, 100, 100);
+            epyc.SetBounds(310, 10, 100, 100);
+            custom.SetBounds(10, 110, 400, 60);
             //add buttons in frame controls
             this.Controls.Add(easy);
             this.Controls.Add(medium);
             this.Controls.Add(hard);
             this.Controls.Add(epyc);
-
+            this.Controls.Add(custom);
             //init UserName Field
             usernameBox = new TextBox();
             usernameBox.SetBounds(this.Size.Width/2-50, this.Size.Height/2, 100, 100);
@@ -125,7 +132,104 @@ namespace Game.Images
                     sizeTmp.Width = 866;
                     loadDifficultSetings(EPYC_COUNT, sizeTmp);
                 }
+                if (tmp.Name.Equals("Custom"))
+                {
+                    difficultLevel = tmp.Name;
+                    loadCustomSettings();
+                }
             }    
+        }
+
+        private void loadCustomSettings()
+        {
+            setColRow();
+            clearMainPanel();
+            this.Controls.Add(MainPanel);
+            loadCustomImages();
+            customMixImages();
+            paintCustomImages();
+            setOptimalSize();
+            t = new System.Timers.Timer(5000);
+            t.Elapsed += customHideColors;
+            t.Start();
+        }
+
+        private void customHideColors(object sender, ElapsedEventArgs e)
+        {
+            for (int i = 0; i < col*row; i++)
+            {
+                pictures[i].hideColor();
+            }
+            t.Stop();
+            t.Elapsed -= hideColors;
+            t.Dispose();
+            gameCycle = new System.Timers.Timer(1000);
+            gameCycle.Elapsed += gameTimerMeth;
+            gameCycle.Start();
+        }
+
+        private void clearMainPanel()
+        {
+            while (this.Controls.Count != 0)
+            {
+                for (int i = 0; i < Controls.Count; i++)
+                {
+                    this.Controls.RemoveAt(i);
+                }
+            }
+        }
+
+        private void setColRow()
+        {
+            try
+            {
+                col = int.Parse(Interaction.InputBox("", "Images", "Set col count", -1, -1));
+                row = int.Parse(Interaction.InputBox("", "Images", "Set row count", -1, -1));
+                if ((col * row) % 2 != 0)
+                {
+                    MessageBox.Show("Multiply of col and row must be divided by 2 without remain");
+                    setColRow();
+                }
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Wrong number");
+            }
+        }
+
+        private void setOptimalSize()
+        {
+            Size sizeTmp = new Size();
+            sizeTmp.Height = (col*100)+(((col*2)*3)+38);
+            sizeTmp.Width = (row*100)+(((row*2)*3)+16);
+            this.Size = sizeTmp;
+            this.FormBorderStyle = FormBorderStyle.FixedDialog;
+        }
+
+        private void paintCustomImages()
+        {
+            for (int i = 0; i < col*row; i++)
+            {
+                MainPanel.Controls.Add(pictures[i]);
+            }
+            
+        }
+
+        private void loadCustomImages()
+        {
+            Random r = new Random();
+            for (int i = 0; i < (col*row)/2; i++)
+            {
+                Color color = Color.FromArgb(r.Next(255), r.Next(255), r.Next(255));
+                for (int k = 0; k < 2; k++)
+                {
+                    pictures.Add(new ImageBox());
+                    pictures[pictures.Count - 1].Index = i;
+                    pictures[pictures.Count - 1].BackColor = color;
+                    pictures[pictures.Count - 1].BackgroundImage = null;
+                    pictures[pictures.Count - 1].parent = this;
+                }
+            }
         }
 
         private void setUsername(string username)
@@ -280,6 +384,18 @@ namespace Game.Images
             {
                 int index = r.Next(imageCount);
                 ImageBox tmp=pictures[0];
+                pictures[0] = pictures[index];
+                pictures[index] = tmp;
+            }
+        }
+
+        private void customMixImages()
+        {
+            Random r = new Random();
+            for (int i = 0; i < 100000; i++)
+            {
+                int index = r.Next(col*row);
+                ImageBox tmp = pictures[0];
                 pictures[0] = pictures[index];
                 pictures[index] = tmp;
             }

@@ -7,3 +7,12 @@ c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj
 c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj\Debug\Game.Images.exe
 c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj\Debug\Game.Images.pdb
 c:\users\wypik\documents\visual studio 2015\Projects\Game.Images\Game.Images\obj\Debug\Game.Images.MainFrame.resources
+C:\Users\WyPik\Desktop\Images\Game.Images\Game.Images\bin\Debug\Game.Images.exe.config
+C:\Users\WyPik\Desktop\Images\Game.Images\Game.Images\obj\Debug\Game.Images.exe
+C:\Users\WyPik\Desktop\Images\Game.Images\Game.Images\obj\Debug\Game.Images.pdb
+C:\Users\WyPik\Desktop\Images\Game.Images\Game.Images\bin\Debug\Game.Images.exe
+C:\Users\WyPik\Desktop\Images\Game.Images\Game.Images\bin\Debug\Game.Images.pdb
+C:\Users\WyPik\Desktop\Images\Game.Images\Game.Images\obj\Debug\Game.Images.csprojResolveAssemblyReference.cache
+C:\Users\WyPik\Desktop\Images\Game.Images\Game.Images\obj\Debug\Game.Images.MainFrame.resources
+C:\Users\WyPik\Desktop\Images\Game.Images\Game.Images\obj\Debug\Game.Images.Properties.Resources.resources
+C:\Users\WyPik\Desktop\Images\Game.Images\Game.Images\obj\Debug\Game.Images.csproj.GenerateResource.Cache
