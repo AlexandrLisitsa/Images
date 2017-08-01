@@ -38,7 +38,6 @@
             this.MainPanel.Name = "MainPanel";
             this.MainPanel.Size = new System.Drawing.Size(426, 321);
             this.MainPanel.TabIndex = 0;
-            this.MainPanel.Click += new System.EventHandler(this.MainPanel_Click);
             // 
             // MainFrame
             // 

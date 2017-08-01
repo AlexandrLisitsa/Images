@@ -177,7 +177,17 @@ namespace Game.Images
                     this.Controls.RemoveAt(i);
                 }
             }
+            while (MainPanel.Controls.Count != 0)
+            {
+                for (int i = 0; i < MainPanel.Controls.Count; i++)
+                {
+                    MainPanel.Controls.RemoveAt(i);
+                }
+            }
+
         }
+
+
 
         private void setColRow()
         {
@@ -315,10 +325,23 @@ namespace Game.Images
                 sizeTmp.Height = 357;
                 sizeTmp.Width = 442;
                 this.Size = sizeTmp;
+                clearPictures();
                 initMainMenu();
+                gameSeconds = 0;
             }else
             {
                 this.Dispose();
+            }
+        }
+
+        private void clearPictures()
+        {
+            while (pictures.Count != 0)
+            {
+                for (int i = 0; i < pictures.Count; i++)
+                {
+                    pictures.RemoveAt(i);
+                }
             }
         }
 
